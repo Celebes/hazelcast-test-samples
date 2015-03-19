@@ -1,0 +1,1 @@
+mvn exec:java -Dexec.mainClass=io.github.celebes.hazelcast.test.samples.GettingStartedClient

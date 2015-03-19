@@ -1,0 +1,2 @@
+1. Dowolna ilosc razy i na dowolnych komputerach uruchomic addClusterNode.bat aby dodac wêz³y klastra
+2. Nastêpnie uruchomiæ addClusterClient.bat by dodaæ klienta, który pod³¹czy siê do tego klastra i wejdzie z nim w interakcje
