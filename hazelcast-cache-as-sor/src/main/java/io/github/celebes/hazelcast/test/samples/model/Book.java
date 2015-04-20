@@ -1,4 +1,7 @@
-package io.github.celebes.hazelcast.test.samples;
+package io.github.celebes.hazelcast.test.samples.model;
+
+import io.github.celebes.hazelcast.test.samples.BookParameters;
+import io.github.celebes.hazelcast.test.samples.EntityObject;
 
 import java.io.Serializable;
 
@@ -11,7 +14,7 @@ import javax.validation.constraints.Size;
 		@NamedQuery(name = "findAllBooks", query = "SELECT b FROM Book b"),
 		@NamedQuery(name = "findBookH2G2", query = "SELECT b FROM Book b WHERE b.title ='H2G2'"),
 		@NamedQuery(name = "findBookById", query = "SELECT b FROM Book b WHERE b.id = :id") })
-public class Book implements Serializable {
+public class Book implements EntityObject {
 	private static final long serialVersionUID = -7373279922699721930L;
 	@Id
 	@GeneratedValue
@@ -41,8 +44,14 @@ public class Book implements Serializable {
 		this.illustrations = illustrations;
 	}
 
+	@Override
 	public Long getId() {
 		return id;
+	}
+	
+	@Override
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public String getTitle() {

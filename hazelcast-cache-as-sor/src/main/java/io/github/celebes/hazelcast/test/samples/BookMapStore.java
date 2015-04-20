@@ -1,5 +1,7 @@
 package io.github.celebes.hazelcast.test.samples;
 
+import io.github.celebes.hazelcast.test.samples.model.Book;
+
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
